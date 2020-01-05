@@ -25,7 +25,6 @@
 		118188F423C1769700576518 /* FlightsViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F323C1769700576518 /* FlightsViewController+Cell.swift */; };
 		118188F623C176E800576518 /* FlightsViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F523C176E800576518 /* FlightsViewController+Row.swift */; };
 		118188F823C17CA100576518 /* FlightsViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F723C17CA100576518 /* FlightsViewController+Actions.swift */; };
-		11B7814423C0E9F700CBE313 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814323C0E9F700CBE313 /* Enums.swift */; };
 		11B7814723C0F48C00CBE313 /* CustomerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814623C0F48C00CBE313 /* CustomerObject.swift */; };
 		11B7814923C1109900CBE313 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814823C1109900CBE313 /* Constants.swift */; };
 		11B7814D23C12B2700CBE313 /* CAGradientLayer+Maker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814C23C12B2700CBE313 /* CAGradientLayer+Maker.swift */; };
@@ -66,7 +65,6 @@
 		118188F323C1769700576518 /* FlightsViewController+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Cell.swift"; sourceTree = "<group>"; };
 		118188F523C176E800576518 /* FlightsViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Row.swift"; sourceTree = "<group>"; };
 		118188F723C17CA100576518 /* FlightsViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Actions.swift"; sourceTree = "<group>"; };
-		11B7814323C0E9F700CBE313 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		11B7814623C0F48C00CBE313 /* CustomerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerObject.swift; sourceTree = "<group>"; };
 		11B7814823C1109900CBE313 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		11B7814C23C12B2700CBE313 /* CAGradientLayer+Maker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Maker.swift"; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 		11B7814223C0E9DF00CBE313 /* Definitions */ = {
 			isa = PBXGroup;
 			children = (
-				11B7814323C0E9F700CBE313 /* Enums.swift */,
 				11B7814823C1109900CBE313 /* Constants.swift */,
 			);
 			path = Definitions;
@@ -420,7 +417,6 @@
 				1152B78123C012640064B403 /* FlightDetailsCell.swift in Sources */,
 				1152B78323C012960064B403 /* FlightDetailsCell+Setter.swift in Sources */,
 				11B7814923C1109900CBE313 /* Constants.swift in Sources */,
-				11B7814423C0E9F700CBE313 /* Enums.swift in Sources */,
 				118188F823C17CA100576518 /* FlightsViewController+Actions.swift in Sources */,
 				1152B77423C00D270064B403 /* FlightObject.swift in Sources */,
 			);
