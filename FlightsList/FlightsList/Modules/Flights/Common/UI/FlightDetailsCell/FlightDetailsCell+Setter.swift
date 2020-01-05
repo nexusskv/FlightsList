@@ -11,9 +11,19 @@ import UIKit
 
 
 extension FlightDetailsCell {
+          
+    /// ---> Function for UI customisations <--- ///
+    func customizeUI() {        
+        roundView.roundCorners(12)
+        
+        requestButton.roundCorners(12)
+        
+        selectionStyle = .none
+    }
+    
     
     /// ---> Setter for values on UI <--- ///
-    func setValues(_ object: FlightObject) {
+    func setValues(_ object: CustomerObject) {
         
     }
 }

@@ -22,6 +22,15 @@
 		1152B77E23C011D50064B403 /* FlightsCell+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B77D23C011D50064B403 /* FlightsCell+Setter.swift */; };
 		1152B78123C012640064B403 /* FlightDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B78023C012640064B403 /* FlightDetailsCell.swift */; };
 		1152B78323C012960064B403 /* FlightDetailsCell+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B78223C012960064B403 /* FlightDetailsCell+Setter.swift */; };
+		118188F423C1769700576518 /* FlightsViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F323C1769700576518 /* FlightsViewController+Cell.swift */; };
+		118188F623C176E800576518 /* FlightsViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F523C176E800576518 /* FlightsViewController+Row.swift */; };
+		118188F823C17CA100576518 /* FlightsViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118188F723C17CA100576518 /* FlightsViewController+Actions.swift */; };
+		11B7814423C0E9F700CBE313 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814323C0E9F700CBE313 /* Enums.swift */; };
+		11B7814723C0F48C00CBE313 /* CustomerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814623C0F48C00CBE313 /* CustomerObject.swift */; };
+		11B7814923C1109900CBE313 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814823C1109900CBE313 /* Constants.swift */; };
+		11B7814D23C12B2700CBE313 /* CAGradientLayer+Maker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7814C23C12B2700CBE313 /* CAGradientLayer+Maker.swift */; };
+		11B7815123C12C3B00CBE313 /* UIView+CustomGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7815023C12C3B00CBE313 /* UIView+CustomGradient.swift */; };
+		11B7815323C151F800CBE313 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B7815223C151F800CBE313 /* UIView+Corners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		1152B77D23C011D50064B403 /* FlightsCell+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsCell+Setter.swift"; sourceTree = "<group>"; };
 		1152B78023C012640064B403 /* FlightDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsCell.swift; sourceTree = "<group>"; };
 		1152B78223C012960064B403 /* FlightDetailsCell+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDetailsCell+Setter.swift"; sourceTree = "<group>"; };
+		118188F323C1769700576518 /* FlightsViewController+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Cell.swift"; sourceTree = "<group>"; };
+		118188F523C176E800576518 /* FlightsViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Row.swift"; sourceTree = "<group>"; };
+		118188F723C17CA100576518 /* FlightsViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsViewController+Actions.swift"; sourceTree = "<group>"; };
+		11B7814323C0E9F700CBE313 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		11B7814623C0F48C00CBE313 /* CustomerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerObject.swift; sourceTree = "<group>"; };
+		11B7814823C1109900CBE313 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11B7814C23C12B2700CBE313 /* CAGradientLayer+Maker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Maker.swift"; sourceTree = "<group>"; };
+		11B7815023C12C3B00CBE313 /* UIView+CustomGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CustomGradient.swift"; sourceTree = "<group>"; };
+		11B7815223C151F800CBE313 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +149,7 @@
 		1152B76623C008320064B403 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11B7814A23C12ACB00CBE313 /* Extentions */,
 				1152B76C23C008B20064B403 /* Resources */,
 			);
 			path = Common;
@@ -160,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				1152B76F23C00B730064B403 /* FlightsViewController+Functions.swift */,
+				118188F323C1769700576518 /* FlightsViewController+Cell.swift */,
+				118188F523C176E800576518 /* FlightsViewController+Row.swift */,
+				118188F723C17CA100576518 /* FlightsViewController+Actions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +189,7 @@
 		1152B76A23C0087F0064B403 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11B7814223C0E9DF00CBE313 /* Definitions */,
 				1152B77923C010F90064B403 /* UI */,
 				1152B77123C00CF00064B403 /* Data model */,
 				1152B76B23C008880064B403 /* Storyboard */,
@@ -195,6 +218,7 @@
 		1152B77123C00CF00064B403 /* Data model */ = {
 			isa = PBXGroup;
 			children = (
+				11B7814523C0F46000CBE313 /* CustomerObject */,
 				1152B77223C00D0C0064B403 /* FlightObject */,
 			);
 			path = "Data model";
@@ -211,8 +235,8 @@
 		1152B77923C010F90064B403 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1152B77F23C0124F0064B403 /* FlightDetailsCell */,
 				1152B77A23C010FE0064B403 /* FlightsCell */,
+				1152B77F23C0124F0064B403 /* FlightDetailsCell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -233,6 +257,49 @@
 				1152B78223C012960064B403 /* FlightDetailsCell+Setter.swift */,
 			);
 			path = FlightDetailsCell;
+			sourceTree = "<group>";
+		};
+		11B7814223C0E9DF00CBE313 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				11B7814323C0E9F700CBE313 /* Enums.swift */,
+				11B7814823C1109900CBE313 /* Constants.swift */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+		11B7814523C0F46000CBE313 /* CustomerObject */ = {
+			isa = PBXGroup;
+			children = (
+				11B7814623C0F48C00CBE313 /* CustomerObject.swift */,
+			);
+			path = CustomerObject;
+			sourceTree = "<group>";
+		};
+		11B7814A23C12ACB00CBE313 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				11B7814E23C12C1500CBE313 /* UIView */,
+				11B7814B23C12AD500CBE313 /* CAGradientLayer */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		11B7814B23C12AD500CBE313 /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				11B7814C23C12B2700CBE313 /* CAGradientLayer+Maker.swift */,
+			);
+			path = CAGradientLayer;
+			sourceTree = "<group>";
+		};
+		11B7814E23C12C1500CBE313 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				11B7815023C12C3B00CBE313 /* UIView+CustomGradient.swift */,
+				11B7815223C151F800CBE313 /* UIView+Corners.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,14 +405,23 @@
 			files = (
 				1152B77623C010140064B403 /* FlightsViewController+TableDataSource.swift in Sources */,
 				1152B77023C00B730064B403 /* FlightsViewController+Functions.swift in Sources */,
+				11B7814723C0F48C00CBE313 /* CustomerObject.swift in Sources */,
+				11B7815123C12C3B00CBE313 /* UIView+CustomGradient.swift in Sources */,
+				11B7814D23C12B2700CBE313 /* CAGradientLayer+Maker.swift in Sources */,
 				1152B76E23C008DD0064B403 /* FlightsViewController.swift in Sources */,
+				118188F623C176E800576518 /* FlightsViewController+Row.swift in Sources */,
 				1152B77823C0106A0064B403 /* FlightsViewController+TableDelegate.swift in Sources */,
 				1152B77E23C011D50064B403 /* FlightsCell+Setter.swift in Sources */,
+				118188F423C1769700576518 /* FlightsViewController+Cell.swift in Sources */,
+				11B7815323C151F800CBE313 /* UIView+Corners.swift in Sources */,
 				1152B74323C007FB0064B403 /* AppDelegate.swift in Sources */,
 				1152B77C23C011090064B403 /* FlightsCell.swift in Sources */,
 				1152B74523C007FB0064B403 /* SceneDelegate.swift in Sources */,
 				1152B78123C012640064B403 /* FlightDetailsCell.swift in Sources */,
 				1152B78323C012960064B403 /* FlightDetailsCell+Setter.swift in Sources */,
+				11B7814923C1109900CBE313 /* Constants.swift in Sources */,
+				11B7814423C0E9F700CBE313 /* Enums.swift in Sources */,
+				118188F823C17CA100576518 /* FlightsViewController+Actions.swift in Sources */,
 				1152B77423C00D270064B403 /* FlightObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,7 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FlightsList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlightsList/Common/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,7 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rost.FlightsList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,7 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FlightsList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FlightsList/Common/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rost.FlightsList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
