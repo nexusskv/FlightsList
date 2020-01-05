@@ -12,8 +12,23 @@ import UIKit
 
 extension FlightsCell {
     
-    /// ---> Setter for values on UI <--- ///
-    func setValues(_ object: FlightObject) {
+    /// ---> Function for UI customisations <--- ///
+    func setupUI() {
+        roundView.roundCorners(12)
         
+        selectionStyle = .none
+    }
+    
+    /// ---> Setter for values on UI <--- ///
+    func setValues(_ object: FlightObject, index: IndexPath) {
+        countLabel.text     = "\(index.row + 1)"
+        dateLabel.text      = "TODAY"
+        timeLabel.text      = "06:30 PM"
+        fromLabel.text      = object.fromPlace
+        toLabel.text        = object.toPlace
+        requesLabel.text    = "\(object.requesNumber)"
+        costLabel.text      = "$" + "\(object.costFlight)"
+        weightLabel.text    = object.weightType
     }
 }
+

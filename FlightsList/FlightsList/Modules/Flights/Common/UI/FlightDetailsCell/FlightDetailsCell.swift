@@ -10,8 +10,15 @@ import Foundation
 import UIKit
 
 
-class FlightDetailsCell: UITableViewCell {
-
+class FlightDetailsCell: FlightsCell {
+    @IBOutlet weak var requestButton: UIButton!
+    
+    /// ---> View life cycle <--- ///
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        customizeUI()
+    }
 }
 
 

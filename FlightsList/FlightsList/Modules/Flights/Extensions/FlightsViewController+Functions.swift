@@ -14,40 +14,23 @@ extension FlightsViewController {
     
     /// ---> Function for UI customisations  <--- ///
     func setupUI() {
-        flightsTable.tableFooterView = UIView()
-    }
+        let viewSize = flightsTable.bounds.size
+        let gradientRect = CGRect(x: 0.0, y: 0.0, width: viewSize.width, height: viewSize.height)
+        
+        let bgView = UIView.makeGradientView(gradientRect)
 
+        flightsTable.backgroundView     = bgView
+        
+        flightsTable.tableFooterView    = UIView()
+    }
     
-    /// ---> Function for make custom cells based on index of row  <--- ///
-    func makeCell(_ sender: UITableView, at index: IndexPath) -> UITableViewCell {
-        if let cell = sender.dequeueReusableCell(withIdentifier: "FlightsCell", for: index) as? FlightsCell {
-            
-            let object = dataArray[index.row]
-            
-            cell.setValues(object)
-            
-            return cell
+    
+    /// ---> Function for set table data source  <--- ///
+    func setDataSource() {
+        for _ in 0 ..< 20 {
+            dataArray.append(FlightObject() as AnyObject)
         }
         
-        return UITableViewCell()
-    }
-    
-    
-    /// ---> Function for make custom height based on index of row  <--- ///
-    func makeHeight(_ index: Int) -> CGFloat {
-        return 100.0
-    }
-    
-    
-    /// ---> Function for make count of rows  <--- ///
-    func makeRowsCount() -> Int {
-        return dataArray.count
-    }
-    
-    
-    /// ---> Function for present details view  <--- ///
-    func presentDetails(_ index: Int) {
-        let selectedFlight = dataArray[index]
-
+        flightsTable.reloadData()
     }
 }
