@@ -15,9 +15,8 @@ extension FlightsCell {
     /// ---> Function for UI customisations <--- ///
     func setupUI() {
         roundView.roundCorners(12)
-        
-        selectionStyle = .none
     }
+    
     
     /// ---> Setter for values on UI <--- ///
     func setValues(_ object: FlightObject, index: IndexPath) {

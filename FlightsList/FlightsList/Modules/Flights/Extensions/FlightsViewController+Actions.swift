@@ -12,11 +12,14 @@ import UIKit
 
 extension FlightsViewController {
     
+    /// ---> Action for hamburger button  <--- ///
     @IBAction func hamburgerButtonTapped(_ sender: UIButton) {
-        removeSelectedRow()
+        handleDetailsTap(sender)
     }
     
+    
+    /// ---> Action for request button  <--- ///
     @IBAction func requestButtonTapped(_ sender: UIButton) {
-        removeSelectedRow()
+        handleDetailsTap(sender)
     }
 }

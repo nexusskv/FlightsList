@@ -27,10 +27,34 @@ extension FlightsViewController {
     
     /// ---> Function for set table data source  <--- ///
     func setDataSource() {
-        for _ in 0 ..< 20 {
-            dataArray.append(FlightObject() as AnyObject)
-        }
+        dataArray = [AnyObject]()
         
-        flightsTable.reloadData()
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            for _ in 0 ..< 20 {
+                strongSelf.dataArray.append(FlightObject() as AnyObject)
+            }
+        
+            DispatchQueue.main.async {
+                strongSelf.flightsTable.reloadData()
+            }
+        }
+    }
+    
+    
+    /// ---> Function for handle user tap by table cells  <--- ///
+    func handleDetailsTap(_ button: UIButton) {
+        button.zoomView({ [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                strongSelf.removeSelectedRow()
+            }
+        })
     }
 }

@@ -17,9 +17,9 @@ extension FlightsViewController {
         if selectedIndex == index.row {
             if let cell = sender.dequeueReusableCell(withIdentifier: "FlightDetailsCell", for: index) as? FlightDetailsCell {
                 
-                //let object = dataArray[index.row]
-                
-                //cell.setValues(object, index: index)
+                if let object = dataArray[index.row] as? CustomerObject {
+                    cell.setValues(object, flight: selectedFlight, index: index)
+                }
                 
                 return cell
             }
@@ -41,7 +41,7 @@ extension FlightsViewController {
     /// ---> Function for make custom height based on index of row  <--- ///
     func makeHeight(_ index: IndexPath) -> CGFloat {
         if selectedIndex == index.row {
-            return 400.0
+            return 410.0
         }
         
         return 170.0
@@ -50,24 +50,30 @@ extension FlightsViewController {
     
     /// ---> Function for make count of rows  <--- ///
     func makeRowsCount() -> Int {
-        return dataArray.count
+        if let array = dataArray {
+            return array.count
+        }
+        
+        return 0
     }
     
     
     /// ---> Function for present details view  <--- ///
-    func presentDetails(_ index: IndexPath) {
-        if selectedIndex >= 0 {
-            if selectedIndex == index.row {
-                removeSelectedRow()
-            } else {
-                removeSelectedRow()
-                
-                DispatchQueue.main.async {
-                    self.addSelectedRow(index)
+    func presentDetails(_ table: UITableView, at index: IndexPath) {
+        if let cell = table.cellForRow(at: index) as? FlightsCell {
+            if cell.isKind(of: FlightsCell.self) {
+                if selectedIndex >= 0 {
+                    if selectedIndex == index.row {
+                        removeSelectedRow()
+                    } else {
+                        removeSelectedRow()
+                                            
+                        addSelectedRow(index)
+                    }
+                } else {
+                    addSelectedRow(index)
                 }
             }
-        } else {
-            addSelectedRow(index)
         }
     }
 }
