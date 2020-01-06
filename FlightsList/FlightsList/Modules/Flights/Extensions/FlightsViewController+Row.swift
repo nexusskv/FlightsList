@@ -12,35 +12,53 @@ import UIKit
 
 extension FlightsViewController {
     
+    /// ---> Function for add selected row to table  <--- ///
     func addSelectedRow(_ index: IndexPath) {
         selectedIndex = index.row
-        dataArray[index.row] = CustomerObject() as AnyObject
-        refreshTable(index)
-    }
-    
-    
-    func removeSelectedRow() {
-        dataArray[selectedIndex] = FlightObject() as AnyObject
-        refreshTable(IndexPath(row: selectedIndex, section: 0))
-        selectedIndex = -1
-    }
-    
-    
-    func refreshTable(_ index: IndexPath) {
-        flightsTable.beginUpdates()
         
-        flightsTable.deleteRows(at: [index], with: .fade)
-        flightsTable.insertRows(at: [index], with: .fade)
-        
-        flightsTable.endUpdates()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            UIView.transition(with: self.flightsTable,
-                              duration: 0.4,
-                              options: .transitionCrossDissolve,
-                              animations: { self.flightsTable.reloadData() },
-                              completion: nil)
+        if let object = dataArray[index.row] as? FlightObject {
+            selectedFlight = object
         }
-
+        
+        dataArray[index.row] = CustomerObject() as AnyObject
+        refreshTable(flightsTable,
+                     index: index,
+                     type: .add)
+    }
+    
+    
+    /// ---> Function for remove selected row from table  <--- ///
+    func removeSelectedRow() {
+        dataArray[selectedIndex] = selectedFlight as AnyObject
+        refreshTable(flightsTable,
+                     index: IndexPath(row: selectedIndex, section: 0),
+                     type: .remove)
+        selectedIndex   = -1
+        selectedFlight  = nil
+    }
+    
+    
+    /// ---> Function for refresh table with animation  <--- ///
+    func refreshTable(_ table: UITableView, index: IndexPath , type: RowsActions) {
+        table.performBatchUpdates({
+            switch type {
+                case .add:
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        UIView.transition(with: table,
+                                          duration: 0.4,
+                                          options: .transitionCrossDissolve,
+                                          animations: { table.reloadRows(at: [index], with: .top) },
+                                          completion: nil)
+                    }
+                case .remove:
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        UIView.transition(with: table,
+                                          duration: 0.4,
+                                          options: .transitionCrossDissolve,
+                                          animations: { table.reloadRows(at: [index], with: .bottom) },
+                                          completion: nil)
+                    }
+            }
+        })
     }
 }

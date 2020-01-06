@@ -22,6 +22,6 @@ extension FlightsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        presentDetails(indexPath)
+        presentDetails(tableView, at: indexPath)
     }
 }

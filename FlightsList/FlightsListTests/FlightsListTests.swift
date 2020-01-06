@@ -10,25 +10,65 @@ import XCTest
 @testable import FlightsList
 
 class FlightsListTests: XCTestCase {
-
+    var viewController: FlightsViewController!
+    
+    /// ---> Function for set test view controller <--- ///
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Flights", bundle: nil)
+        viewController = storyboard.instantiateViewController(withIdentifier: "FlightsViewController") as? FlightsViewController
     }
 
+    
+    /// ---> Function for destruct data <--- ///
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewController = nil
+        
+        super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    /// --->  Function for test exists views after loading  <--- ///
+    func testViewsAfterLoading() {
+        XCTAssertNil(viewController.flightsTable,
+                     "Before loading data table view should be nil.")
+        
+        XCTAssertNil(viewController.dataArray,
+                     "Before loading data array should be nil.")
+        
+        let _ = viewController.view
+
+        XCTAssertNotNil(viewController.flightsTable,
+                        "Data table view should be set.")
+        
+        XCTAssertNotNil(viewController.dataArray,
+                        "Data array should be set.")
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    /// --->  Function for check conform table view to datasource protocol  <--- ///
+    func testConformsToTableViewDataSource () {
+        XCTAssert(viewController.conforms(to: UITableViewDataSource.self),
+                  "Table view not conform UITableViewDataSource.")
+        
+        XCTAssertTrue(viewController.responds(to: #selector(viewController.tableView(_:cellForRowAt:))),
+                      "Table view not respond to cellForRowAt: selector.")
+        
+        XCTAssertTrue(viewController.responds(to: #selector(viewController.tableView(_:numberOfRowsInSection:))),
+                      "Table view not respond to numberOfRowsInSection: selector.")
+    }
+    
+    
+    /// --->  Function for check conform table view to delegate protocol  <--- ///
+    func testConformsToTableViewDelegate() {
+        XCTAssert(viewController.conforms(to: UITableViewDelegate.self),
+                  "Table view not conform UITableViewDelegate.")
+        
+        XCTAssertTrue(viewController.responds(to: #selector(viewController.tableView(_:heightForRowAt:))),
+                      "Table view not respond to heightForRowAt: selector.")
+
+        
+        XCTAssertTrue(viewController.responds(to: #selector(viewController.tableView(_:didSelectRowAt:))),
+                      "Table view not respond to didSelectRowAt: selector.")
     }
 
 }

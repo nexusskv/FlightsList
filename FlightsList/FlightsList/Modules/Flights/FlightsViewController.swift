@@ -12,8 +12,9 @@ import UIKit
 
 class FlightsViewController: UIViewController {
     @IBOutlet weak var flightsTable: UITableView!
-    var dataArray: [AnyObject] = []    
+    var dataArray: [AnyObject]!
     var selectedIndex = -1
+    var selectedFlight: FlightObject!
             
     /// ---> View life cycle  <--- ///
     override func viewDidLoad() {
