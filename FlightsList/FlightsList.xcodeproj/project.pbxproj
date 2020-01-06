@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112EA7D723C2562B00F70D05 /* UIView+Zoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7D623C2562B00F70D05 /* UIView+Zoom.swift */; };
+		112EA7E923C27A6600F70D05 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7E523C27A6600F70D05 /* StarsView.swift */; };
+		112EA7EA23C27A6600F70D05 /* StarsView+Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7E723C27A6600F70D05 /* StarsView+Setters.swift */; };
+		112EA7EB23C27A6600F70D05 /* StarsView+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7E823C27A6600F70D05 /* StarsView+Base.swift */; };
+		112EA7EE23C2BFEE00F70D05 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7ED23C2BFEE00F70D05 /* BaseCell.swift */; };
+		112EA7F023C2C10300F70D05 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112EA7EF23C2C10300F70D05 /* UIView+Shadow.swift */; };
 		1152B74323C007FB0064B403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B74223C007FB0064B403 /* AppDelegate.swift */; };
 		1152B74523C007FB0064B403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B74423C007FB0064B403 /* SceneDelegate.swift */; };
-		1152B74A23C007FB0064B403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1152B74823C007FB0064B403 /* Main.storyboard */; };
+		1152B74A23C007FB0064B403 /* Flights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1152B74823C007FB0064B403 /* Flights.storyboard */; };
 		1152B74C23C007FE0064B403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1152B74B23C007FE0064B403 /* Assets.xcassets */; };
 		1152B74F23C007FE0064B403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1152B74D23C007FE0064B403 /* LaunchScreen.storyboard */; };
 		1152B75A23C007FE0064B403 /* FlightsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1152B75923C007FE0064B403 /* FlightsListTests.swift */; };
@@ -43,10 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112EA7D623C2562B00F70D05 /* UIView+Zoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Zoom.swift"; sourceTree = "<group>"; };
+		112EA7E523C27A6600F70D05 /* StarsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
+		112EA7E723C27A6600F70D05 /* StarsView+Setters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsView+Setters.swift"; sourceTree = "<group>"; };
+		112EA7E823C27A6600F70D05 /* StarsView+Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarsView+Base.swift"; sourceTree = "<group>"; };
+		112EA7ED23C2BFEE00F70D05 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		112EA7EF23C2C10300F70D05 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		1152B73F23C007FA0064B403 /* FlightsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1152B74223C007FB0064B403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1152B74423C007FB0064B403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1152B74923C007FB0064B403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1152B74923C007FB0064B403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Flights.storyboard; sourceTree = "<group>"; };
 		1152B74B23C007FE0064B403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1152B74E23C007FE0064B403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1152B75023C007FE0064B403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +102,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112EA7E323C27A6600F70D05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				112EA7E423C27A6600F70D05 /* StarsView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		112EA7E423C27A6600F70D05 /* StarsView */ = {
+			isa = PBXGroup;
+			children = (
+				112EA7E523C27A6600F70D05 /* StarsView.swift */,
+				112EA7E623C27A6600F70D05 /* StarsView+Extensions */,
+			);
+			path = StarsView;
+			sourceTree = "<group>";
+		};
+		112EA7E623C27A6600F70D05 /* StarsView+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				112EA7E723C27A6600F70D05 /* StarsView+Setters.swift */,
+				112EA7E823C27A6600F70D05 /* StarsView+Base.swift */,
+			);
+			path = "StarsView+Extensions";
+			sourceTree = "<group>";
+		};
+		112EA7EC23C2BFD800F70D05 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				112EA7ED23C2BFEE00F70D05 /* BaseCell.swift */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
 		1152B73623C007FA0064B403 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +193,7 @@
 		1152B76623C008320064B403 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				112EA7E323C27A6600F70D05 /* UI */,
 				11B7814A23C12ACB00CBE313 /* Extentions */,
 				1152B76C23C008B20064B403 /* Resources */,
 			);
@@ -198,7 +245,7 @@
 		1152B76B23C008880064B403 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				1152B74823C007FB0064B403 /* Main.storyboard */,
+				1152B74823C007FB0064B403 /* Flights.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -233,6 +280,7 @@
 		1152B77923C010F90064B403 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				112EA7EC23C2BFD800F70D05 /* BaseCell */,
 				1152B77A23C010FE0064B403 /* FlightsCell */,
 				1152B77F23C0124F0064B403 /* FlightDetailsCell */,
 			);
@@ -295,6 +343,8 @@
 			children = (
 				11B7815023C12C3B00CBE313 /* UIView+CustomGradient.swift */,
 				11B7815223C151F800CBE313 /* UIView+Corners.swift */,
+				112EA7D623C2562B00F70D05 /* UIView+Zoom.swift */,
+				112EA7EF23C2C10300F70D05 /* UIView+Shadow.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -382,7 +432,7 @@
 			files = (
 				1152B74F23C007FE0064B403 /* LaunchScreen.storyboard in Resources */,
 				1152B74C23C007FE0064B403 /* Assets.xcassets in Resources */,
-				1152B74A23C007FB0064B403 /* Main.storyboard in Resources */,
+				1152B74A23C007FB0064B403 /* Flights.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,18 +454,24 @@
 				1152B77023C00B730064B403 /* FlightsViewController+Functions.swift in Sources */,
 				11B7814723C0F48C00CBE313 /* CustomerObject.swift in Sources */,
 				11B7815123C12C3B00CBE313 /* UIView+CustomGradient.swift in Sources */,
+				112EA7EE23C2BFEE00F70D05 /* BaseCell.swift in Sources */,
 				11B7814D23C12B2700CBE313 /* CAGradientLayer+Maker.swift in Sources */,
 				1152B76E23C008DD0064B403 /* FlightsViewController.swift in Sources */,
 				118188F623C176E800576518 /* FlightsViewController+Row.swift in Sources */,
 				1152B77823C0106A0064B403 /* FlightsViewController+TableDelegate.swift in Sources */,
+				112EA7EB23C27A6600F70D05 /* StarsView+Base.swift in Sources */,
 				1152B77E23C011D50064B403 /* FlightsCell+Setter.swift in Sources */,
+				112EA7EA23C27A6600F70D05 /* StarsView+Setters.swift in Sources */,
+				112EA7D723C2562B00F70D05 /* UIView+Zoom.swift in Sources */,
 				118188F423C1769700576518 /* FlightsViewController+Cell.swift in Sources */,
 				11B7815323C151F800CBE313 /* UIView+Corners.swift in Sources */,
 				1152B74323C007FB0064B403 /* AppDelegate.swift in Sources */,
+				112EA7E923C27A6600F70D05 /* StarsView.swift in Sources */,
 				1152B77C23C011090064B403 /* FlightsCell.swift in Sources */,
 				1152B74523C007FB0064B403 /* SceneDelegate.swift in Sources */,
 				1152B78123C012640064B403 /* FlightDetailsCell.swift in Sources */,
 				1152B78323C012960064B403 /* FlightDetailsCell+Setter.swift in Sources */,
+				112EA7F023C2C10300F70D05 /* UIView+Shadow.swift in Sources */,
 				11B7814923C1109900CBE313 /* Constants.swift in Sources */,
 				118188F823C17CA100576518 /* FlightsViewController+Actions.swift in Sources */,
 				1152B77423C00D270064B403 /* FlightObject.swift in Sources */,
@@ -441,12 +497,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1152B74823C007FB0064B403 /* Main.storyboard */ = {
+		1152B74823C007FB0064B403 /* Flights.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1152B74923C007FB0064B403 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Flights.storyboard;
 			sourceTree = "<group>";
 		};
 		1152B74D23C007FE0064B403 /* LaunchScreen.storyboard */ = {
