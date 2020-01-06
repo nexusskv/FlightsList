@@ -11,6 +11,6 @@ import Foundation
 
 struct CustomerObject {
     var userLogo        = "edward_logo"
-    var nameSurname     = "Edward Northon"
-    var userRating      = 4
+    var userName        = "Edward Northon"
+    var userRating      = 3.5
 }

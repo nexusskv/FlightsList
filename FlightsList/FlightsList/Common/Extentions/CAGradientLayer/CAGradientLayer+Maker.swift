@@ -12,6 +12,7 @@ import UIKit
 
 extension CAGradientLayer {
     
+    /// ---> Function for make custom gradient layer  <--- ///
     static func makeGradient(_ colors: [CGColor], rect: CGRect, points: [CGPoint]) -> CAGradientLayer {
         let gradient        = CAGradientLayer()
         gradient.colors     = colors

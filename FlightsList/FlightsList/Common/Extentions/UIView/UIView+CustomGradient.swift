@@ -11,7 +11,8 @@ import UIKit
 
 
 extension UIView {
-    
+        
+    /// ---> Function for make custom gradient view  <--- ///
     static func makeGradientView(_ rect: CGRect) -> UIView {
         let firstColors     = [secondColor, firstColor]
         let secondColors    = [firstColor, secondColor]

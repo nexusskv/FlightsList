@@ -10,10 +10,10 @@ import Foundation
 
 
 struct FlightObject {
-    var timeStamp       = Date()
     var fromPlace       = "W 85th St., New York, 10024"
     var toPlace         = "E 30th St. New York, 10016"
     var requesNumber    = 2
     var costFlight      = 150
     var weightType      = "light"
+    var deadlineTime    = "24"
 }

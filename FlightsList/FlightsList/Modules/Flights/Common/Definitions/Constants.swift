@@ -10,7 +10,14 @@ import Foundation
 import UIKit
 
 
-let firstColor = UIColor(named: "gradientFirstColor")!.cgColor
-let secondColor = UIColor(named: "gradientSecondColor")!.cgColor
+/// ---> Colors for gradient view  <--- ///
+let firstColor      = UIColor(named: "gradientFirstColor")!.cgColor
+let secondColor     = UIColor(named: "gradientSecondColor")!.cgColor
+let clearColor      = UIColor.clear.cgColor
 
-let clearColor = UIColor.clear.cgColor
+
+/// ---> Types of actions for rows  <--- ///
+enum RowsActions: Int {
+    case add = 0
+    case remove
+}
