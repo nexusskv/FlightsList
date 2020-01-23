@@ -14,7 +14,7 @@ extension FlightsViewController: UITableViewDelegate {
             
     /// ---> Function of table view delegate protocol <--- ///
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return makeHeight(indexPath)
+        return viewModel.makeHeight(indexPath, selected: selectedIndex)
     }
     
     
@@ -22,6 +22,6 @@ extension FlightsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        presentDetails(tableView, at: indexPath)
+        viewModel.presentDetails(self, at: indexPath)
     }
 }

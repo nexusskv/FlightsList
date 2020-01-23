@@ -35,6 +35,10 @@ class FlightsListTests: XCTestCase {
         XCTAssertNil(viewController.dataArray,
                      "Before loading data array should be nil.")
         
+        XCTAssertNil(viewController.viewModel,
+                     "Before loading view model should be nil.")
+        
+        
         let _ = viewController.view
 
         XCTAssertNotNil(viewController.flightsTable,
@@ -42,6 +46,9 @@ class FlightsListTests: XCTestCase {
         
         XCTAssertNotNil(viewController.dataArray,
                         "Data array should be set.")
+        
+        XCTAssertNotNil(viewController.viewModel,
+                        "View model should be set.")
     }
 
     

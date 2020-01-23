@@ -11,11 +11,20 @@ import UIKit
 
 
 class FlightsCell: BaseCell {    
+    var viewModel: FlightsCellViewModel!
     
     /// ---> View life cycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        viewModel = FlightsCellViewModel()
+        
         setupUI()
+    }
+    
+    
+    /// ---> Function for UI customisations <--- ///
+    func setupUI() {
+        roundView.roundCorners(12)
     }
 }

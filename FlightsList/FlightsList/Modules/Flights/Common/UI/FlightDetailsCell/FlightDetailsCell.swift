@@ -18,12 +18,28 @@ class FlightDetailsCell: BaseCell {
     @IBOutlet weak var pledgeTitle: UILabel!
     @IBOutlet weak var deliveryCostLabel: UILabel!
     @IBOutlet weak var deadlineLabel: UILabel!
+    var viewModel: FlightDetailsCellViewModel!
     
     /// ---> View life cycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        viewModel = FlightDetailsCellViewModel()
+        
         setupUI()
+    }
+    
+    
+    /// ---> Function for UI customisations <--- ///
+    func setupUI() {
+        roundView.roundCorners(12)
+        
+        requestButton.roundCorners(12)
+        
+        senderLogo.roundCorners(9)
+        
+        pledgeTitle.addBlackShadow()
+        costLabel.addBlackShadow()
     }
 }
 

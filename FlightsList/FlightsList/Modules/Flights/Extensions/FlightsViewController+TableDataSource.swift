@@ -14,7 +14,11 @@ extension FlightsViewController: UITableViewDataSource {
             
     /// ---> Function of table view data source protocol <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = makeCell(tableView, at: indexPath)
+        let cell = viewModel.makeCell(tableView,
+                                      index: indexPath,
+                                      array: dataArray,
+                                      flight: selectedFlight,
+                                      selected: selectedIndex)
 
         return cell
     }
@@ -22,6 +26,6 @@ extension FlightsViewController: UITableViewDataSource {
     
     /// ---> Function of table view data source protocol <--- ///
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return makeRowsCount()
+        return viewModel.makeRowsCount(dataArray)
     }
 }

@@ -14,12 +14,12 @@ extension FlightsViewController {
     
     /// ---> Action for hamburger button  <--- ///
     @IBAction func hamburgerButtonTapped(_ sender: UIButton) {
-        handleDetailsTap(sender)
+        viewModel.handleDetailsTap(self, button: sender)
     }
     
     
     /// ---> Action for request button  <--- ///
     @IBAction func requestButtonTapped(_ sender: UIButton) {
-        handleDetailsTap(sender)
+        viewModel.handleDetailsTap(self, button: sender)
     }
 }
